@@ -7,7 +7,6 @@ app.use(morgan("combined"));
 
 var articles = { 
     'article-one': {
-      title: 'Article one | Prakhar Dwivedi',
       heading: 'Article One',
       date: 'Feb 16, 2017',
       content: `
@@ -42,6 +41,7 @@ var articles = {
 };
 
 function createTemplate (data) {
+   var title = data.title;
    var date = data.date;
    var heading = data.heading;
    var cantent = data.content;
